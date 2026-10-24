@@ -1,0 +1,10 @@
+@import "tailwindcss";
+
+/* Tailwind v4 theme: makes `font-sans` use the Geist font loaded in layout.tsx */
+@theme inline {
+  --font-sans: var(--font-geist-sans);
+}
+
+body {
+  font-family: var(--font-geist-sans), system-ui, sans-serif;
+}

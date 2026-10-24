@@ -1,0 +1,65 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Quote Board — plain React (no build tool)</title>
+    <style>
+      body { font-family: system-ui, sans-serif; background: #f1f5f9; margin: 0; padding: 32px; }
+      .board { max-width: 560px; margin: 0 auto; display: flex; flex-direction: column; gap: 12px; }
+      .quote { background: white; border-radius: 12px; padding: 16px; box-shadow: 0 1px 3px rgb(0 0 0 / 10%); }
+      .quote p { margin: 0 0 8px; font-size: 1.1rem; }
+      .row { display: flex; align-items: center; justify-content: space-between; color: #64748b; }
+      button { border: 1px solid #e2e8f0; background: white; border-radius: 8px; padding: 6px 12px; cursor: pointer; }
+      .tag { font-size: 12px; background: #fef3c7; padding: 2px 8px; border-radius: 99px; }
+    </style>
+
+    <!-- Load React straight from a CDN. No npm, no Vite, no build step. -->
+    <script type="importmap">
+      {
+        "imports": {
+          "react": "https://esm.sh/react@19.3.1",
+          "react-dom/client": "https://esm.sh/react-dom@19.3.1/client?deps=react@19.3.1"
+        }
+      }
+    </script>
+  </head>
+  <body>
+    <div id="root"></div>
+
+    <script type="module">
+      // This is REAL React, but WITHOUT JSX and WITHOUT TypeScript,
+      // because the browser cannot understand JSX/TS — and there is no build tool here.
+      // `h(...)` is what your JSX turns into after Vite compiles it:
+      //   <p className="x">Hi</p>   →   h('p', { className: 'x' }, 'Hi')
+      import { createElement as h, useState } from 'react'
+      import { createRoot } from 'react-dom/client'
+
+      const quotes = [
+        { id: 1, text: 'Everything is a widget.', author: 'Flutter' },
+        { id: 2, text: 'Everything is a component.', author: 'React' },
+        { id: 3, text: 'UI is a function of state.', author: 'Both of them' },
+      ]
+
+      function Quote({ text, author }) {
+        const [likes, setLikes] = useState(0)
+        return h('article', { className: 'quote' },
+          h('p', null, `“${text}”`),
+          h('div', { className: 'row' },
+            h('span', null, `— ${author}`),
+            h('button', { onClick: () => setLikes((n) => n + 1) }, `❤️ ${likes}`),
+          ),
+        )
+      }
+
+      function App() {
+        return h('main', { className: 'board' },
+          h('h1', null, 'Quote Board ', h('span', { className: 'tag' }, '1 · plain React')),
+          quotes.map((q) => h(Quote, { key: q.id, text: q.text, author: q.author })),
+        )
+      }
+
+      createRoot(document.getElementById('root')).render(h(App))
+    </script>
+  </body>
+</html>

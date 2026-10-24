@@ -1,0 +1,5 @@
+[
+  { "id": 1, "text": "Everything is a widget.", "author": "Flutter" },
+  { "id": 2, "text": "Everything is a component.", "author": "React" },
+  { "id": 3, "text": "UI is a function of state.", "author": "Both of them" }
+]

@@ -1,0 +1,114 @@
+/* Global styles. Think of :root variables as your ThemeData. */
+:root {
+  --bg: #f8fafc;
+  --surface: #ffffff;
+  --text: #0f172a;
+  --muted: #64748b;
+  --border: #e2e8f0;
+  --primary: #4f46e5;
+  --primary-dark: #4338ca;
+  --danger: #dc2626;
+  --radius: 12px;
+  font-family: system-ui, -apple-system, 'Segoe UI', Roboto, sans-serif;
+  color: var(--text);
+  background: var(--bg);
+  line-height: 1.5;
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --bg: #0b1120;
+    --surface: #111827;
+    --text: #e5e7eb;
+    --muted: #94a3b8;
+    --border: #1f2937;
+    --primary: #818cf8;
+    --primary-dark: #6366f1;
+  }
+}
+
+*, *::before, *::after { box-sizing: border-box; }
+body { margin: 0; }
+h1, h2, p { margin: 0; }
+h1 { font-size: 1.75rem; }
+h2 { font-size: 1.1rem; }
+a { color: var(--primary); }
+ul { margin: 0; padding-left: 20px; }
+code { background: var(--border); padding: 1px 6px; border-radius: 6px; font-size: 0.9em; }
+
+/* ---------- layout ---------- */
+.appbar {
+  position: sticky; top: 0; z-index: 10;
+  display: flex; align-items: center; gap: 24px; flex-wrap: wrap;
+  padding: 12px 24px; background: var(--surface); border-bottom: 1px solid var(--border);
+}
+.brand { font-weight: 700; font-size: 1.1rem; }
+.nav { display: flex; gap: 4px; }
+.nav-link {
+  display: flex; align-items: center; gap: 6px;
+  padding: 6px 12px; border-radius: 8px; color: var(--muted); text-decoration: none; font-weight: 500;
+}
+.nav-link:hover { background: var(--bg); color: var(--text); }
+.nav-link.active { background: var(--primary); color: white; }
+.pill {
+  font-size: 0.7rem; background: var(--danger); color: white; border-radius: 999px; padding: 0 7px;
+}
+.page { max-width: 760px; margin: 0 auto; padding: 32px 20px 64px; }
+
+/* ---------- helpers ---------- */
+.stack { display: flex; flex-direction: column; gap: 16px; }
+.row { display: flex; align-items: center; gap: 12px; }
+.wrap { flex-wrap: wrap; }
+.spacer { flex: 1; }
+.muted { color: var(--muted); }
+.error { color: var(--danger); font-size: 0.875rem; }
+.card {
+  background: var(--surface); border: 1px solid var(--border); border-radius: var(--radius); padding: 20px;
+}
+.card.warning { border-color: #fca5a5; }
+.empty { text-align: center; padding: 40px; color: var(--muted); border: 2px dashed var(--border); border-radius: var(--radius); }
+
+/* ---------- form controls ---------- */
+.btn {
+  border: 1px solid var(--border); background: var(--surface); color: var(--text);
+  padding: 8px 14px; border-radius: 8px; font: inherit; cursor: pointer; white-space: nowrap;
+}
+.btn:hover:not(:disabled) { border-color: var(--muted); }
+.btn:disabled { opacity: 0.5; cursor: not-allowed; }
+.btn-primary { background: var(--primary); border-color: var(--primary); color: white; }
+.btn-primary:hover:not(:disabled) { background: var(--primary-dark); border-color: var(--primary-dark); }
+.btn-danger { color: var(--danger); }
+
+.field { display: flex; flex-direction: column; gap: 6px; }
+.field label { font-weight: 600; font-size: 0.9rem; }
+.input {
+  border: 1px solid var(--border); background: var(--surface); color: var(--text);
+  border-radius: 8px; padding: 9px 12px; font: inherit;
+}
+.input:focus { outline: 2px solid var(--primary); outline-offset: 1px; }
+textarea.input { resize: vertical; }
+
+/* ---------- tasks page ---------- */
+.task-form { display: flex; gap: 8px; }
+.task-form .input:first-child { flex: 1; }
+.filter-bar { display: flex; gap: 12px; flex-wrap: wrap; align-items: center; }
+.search { flex: 1; min-width: 180px; }
+.segmented { display: flex; background: var(--border); padding: 3px; border-radius: 10px; }
+.segmented button {
+  border: 0; background: none; color: var(--text); padding: 6px 14px; border-radius: 8px; font: inherit; cursor: pointer;
+}
+.segmented button.active { background: var(--surface); font-weight: 600; box-shadow: 0 1px 3px rgb(0 0 0 / 15%); }
+.task-list { list-style: none; padding: 0; display: flex; flex-direction: column; gap: 8px; }
+
+/* ---------- dashboard ---------- */
+.stats { display: grid; grid-template-columns: repeat(3, 1fr); gap: 12px; }
+.stat { display: flex; flex-direction: column; align-items: center; }
+.stat-value { font-size: 2rem; font-weight: 700; }
+.progress { height: 10px; background: var(--border); border-radius: 999px; overflow: hidden; }
+.progress-bar { height: 100%; background: var(--primary); transition: width 300ms ease; }
+
+/* ---------- small screens (MediaQuery) ---------- */
+@media (max-width: 560px) {
+  .task-form { flex-direction: column; }
+  .appbar { gap: 8px; padding: 10px 16px; }
+}

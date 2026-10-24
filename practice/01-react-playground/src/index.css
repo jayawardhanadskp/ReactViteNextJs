@@ -1,0 +1,102 @@
+/* Global styles + small reusable classes the exercises can use:
+   .card .stack .row .btn .btn-primary .btn-ghost .input .field .error .muted .badge */
+
+:root {
+  --bg: #f1f5f9;
+  --surface: #ffffff;
+  --text: #0f172a;
+  --muted: #64748b;
+  --border: #e2e8f0;
+  --primary: #6366f1;
+  --primary-dark: #4f46e5;
+  --danger: #dc2626;
+  --success: #16a34a;
+  --radius: 12px;
+  font-family: system-ui, -apple-system, 'Segoe UI', Roboto, sans-serif;
+  color: var(--text);
+  background: var(--bg);
+}
+
+*, *::before, *::after { box-sizing: border-box; }
+body { margin: 0; }
+h1, h2, h3, p { margin: 0; }
+code { background: #e0e7ff; padding: 1px 6px; border-radius: 6px; font-size: 0.9em; }
+
+/* ---------- shell ---------- */
+.shell { display: flex; min-height: 100vh; }
+.sidebar {
+  width: 260px; flex-shrink: 0; background: var(--surface); border-right: 1px solid var(--border);
+  padding: 20px 12px; display: flex; flex-direction: column; gap: 16px;
+}
+.logo { font-size: 1.1rem; padding: 0 8px; }
+.sidebar nav { display: flex; flex-direction: column; gap: 4px; }
+.nav-item {
+  display: flex; align-items: center; gap: 12px; text-align: left; border: 0; background: none;
+  padding: 10px; border-radius: 10px; cursor: pointer; font: inherit; color: var(--text);
+}
+.nav-item small { display: block; color: var(--muted); font-size: 0.75rem; }
+.nav-item:hover { background: var(--bg); }
+.nav-item.active { background: #eef2ff; color: var(--primary-dark); font-weight: 600; }
+.nav-number {
+  width: 28px; height: 28px; border-radius: 50%; display: grid; place-items: center;
+  background: var(--bg); font-size: 0.8rem; flex-shrink: 0;
+}
+.nav-item.active .nav-number { background: var(--primary); color: white; }
+
+.content { flex: 1; padding: 24px; display: flex; flex-direction: column; gap: 20px; min-width: 0; }
+.content-header { display: flex; justify-content: space-between; align-items: flex-start; gap: 16px; flex-wrap: wrap; }
+.stage {
+  background: var(--surface); border: 1px dashed #cbd5e1; border-radius: var(--radius);
+  padding: 24px; min-height: 300px;
+}
+
+.segmented { display: flex; background: var(--border); border-radius: 10px; padding: 3px; }
+.segmented button {
+  border: 0; background: none; padding: 8px 14px; border-radius: 8px; cursor: pointer; font: inherit;
+}
+.segmented button.active { background: var(--surface); box-shadow: 0 1px 3px rgb(0 0 0 / 15%); font-weight: 600; }
+
+@media (max-width: 700px) {
+  .shell { flex-direction: column; }
+  .sidebar { width: auto; border-right: 0; border-bottom: 1px solid var(--border); }
+}
+
+/* ---------- helpers for exercises ---------- */
+.stack { display: flex; flex-direction: column; gap: 12px; }      /* Column */
+.row { display: flex; align-items: center; gap: 12px; }          /* Row */
+.wrap { flex-wrap: wrap; }
+.spacer { flex: 1; }                                             /* Spacer() */
+.muted { color: var(--muted); }
+.error { color: var(--danger); font-size: 0.875rem; }
+.success { color: var(--success); }
+
+.card {
+  background: var(--surface); border: 1px solid var(--border); border-radius: var(--radius);
+  padding: 16px; box-shadow: 0 1px 3px rgb(0 0 0 / 6%);
+}
+
+.btn {
+  border: 1px solid var(--border); background: var(--surface); color: var(--text);
+  padding: 8px 14px; border-radius: 8px; font: inherit; cursor: pointer;
+  transition: background 150ms, transform 100ms;
+}
+.btn:hover:not(:disabled) { background: var(--bg); }
+.btn:active:not(:disabled) { transform: scale(0.97); }
+.btn:disabled { opacity: 0.45; cursor: not-allowed; }
+.btn-primary { background: var(--primary); border-color: var(--primary); color: white; }
+.btn-primary:hover:not(:disabled) { background: var(--primary-dark); }
+.btn-danger { color: var(--danger); }
+.btn-ghost { border-color: transparent; background: transparent; }
+
+.field { display: flex; flex-direction: column; gap: 6px; }
+.field label { font-size: 0.875rem; font-weight: 600; }
+.input {
+  border: 1px solid #cbd5e1; border-radius: 8px; padding: 9px 12px; font: inherit; width: 100%;
+  background: var(--surface); color: var(--text);
+}
+.input:focus { outline: 2px solid var(--primary); outline-offset: 1px; border-color: transparent; }
+
+.badge {
+  display: inline-block; padding: 2px 8px; border-radius: 999px; font-size: 0.75rem;
+  background: #eef2ff; color: var(--primary-dark); font-weight: 600;
+}

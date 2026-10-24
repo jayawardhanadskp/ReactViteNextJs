@@ -1,0 +1,150 @@
+[
+  {
+    "id": "pol-roti",
+    "title": "Pol Roti",
+    "description": "Soft coconut flatbread, perfect with lunu miris for breakfast.",
+    "category": "breakfast",
+    "minutes": 30,
+    "servings": 4,
+    "ingredients": [
+      "2 cups wheat flour",
+      "1 cup freshly grated coconut",
+      "1 small red onion, finely chopped",
+      "1 green chilli, chopped",
+      "Salt to taste",
+      "Water as needed"
+    ],
+    "steps": [
+      "Mix flour, coconut, onion, chilli and salt in a bowl.",
+      "Add water little by little and knead into a soft dough.",
+      "Divide into balls and flatten each one on a banana leaf or oiled paper.",
+      "Cook on a hot pan for 3–4 minutes per side until golden spots appear."
+    ],
+    "likes": 42,
+    "createdAt": "2026-09-01T07:00:00.000Z"
+  },
+  {
+    "id": "dhal-curry",
+    "title": "Dhal Curry (Parippu)",
+    "description": "Creamy red lentils cooked in coconut milk with turmeric and curry leaves.",
+    "category": "main",
+    "minutes": 35,
+    "servings": 4,
+    "ingredients": [
+      "1 cup red lentils (masoor dhal), washed",
+      "1 cup thin coconut milk",
+      "1/2 cup thick coconut milk",
+      "1/2 tsp turmeric powder",
+      "1 onion, sliced",
+      "2 cloves garlic, sliced",
+      "1 sprig curry leaves",
+      "1 tsp mustard seeds",
+      "Salt to taste"
+    ],
+    "steps": [
+      "Cook the lentils with thin coconut milk, turmeric and half the onion until soft.",
+      "Add the thick coconut milk and salt, and simmer for 2 minutes.",
+      "In another pan, fry mustard seeds, the rest of the onion, garlic and curry leaves in oil.",
+      "Pour the tempering over the dhal and stir."
+    ],
+    "likes": 87,
+    "createdAt": "2026-09-03T12:00:00.000Z"
+  },
+  {
+    "id": "kottu-roti",
+    "title": "Chicken Kottu Roti",
+    "description": "The famous street food: chopped godamba roti stir-fried with vegetables, egg and curry.",
+    "category": "main",
+    "minutes": 45,
+    "servings": 2,
+    "ingredients": [
+      "3 godamba rotis, cut into strips",
+      "1 cup cooked chicken curry with gravy",
+      "2 eggs",
+      "1 carrot, julienned",
+      "1 cup cabbage, shredded",
+      "1 leek, sliced",
+      "1 onion, sliced",
+      "Salt and pepper"
+    ],
+    "steps": [
+      "Fry the onion, then add carrot, leek and cabbage and cook for 3 minutes.",
+      "Push vegetables aside, scramble the eggs in the pan.",
+      "Add the roti strips and chicken with gravy.",
+      "Chop and mix everything with two metal spatulas until well combined. Season and serve hot."
+    ],
+    "likes": 120,
+    "createdAt": "2026-09-05T18:30:00.000Z"
+  },
+  {
+    "id": "watalappan",
+    "title": "Watalappan",
+    "description": "A steamed coconut custard pudding with jaggery, cardamom and cashews.",
+    "category": "dessert",
+    "minutes": 70,
+    "servings": 6,
+    "ingredients": [
+      "250 g kithul jaggery, grated",
+      "1 cup thick coconut milk",
+      "5 eggs",
+      "1/2 tsp cardamom powder",
+      "A pinch of nutmeg",
+      "Cashew nuts to decorate"
+    ],
+    "steps": [
+      "Melt the jaggery in the coconut milk over low heat, then let it cool.",
+      "Beat the eggs lightly and mix them with the jaggery milk and spices.",
+      "Strain into a bowl, decorate with cashews and cover with foil.",
+      "Steam for 45–50 minutes until set. Chill before serving."
+    ],
+    "likes": 65,
+    "createdAt": "2026-09-10T15:00:00.000Z"
+  },
+  {
+    "id": "faluda",
+    "title": "Faluda",
+    "description": "A sweet, colourful rose-syrup milk drink with basil seeds and ice cream.",
+    "category": "drink",
+    "minutes": 15,
+    "servings": 2,
+    "ingredients": [
+      "2 cups cold milk",
+      "4 tbsp rose syrup",
+      "2 tbsp basil seeds, soaked in water for 15 minutes",
+      "1/2 cup jelly cubes",
+      "2 scoops vanilla ice cream"
+    ],
+    "steps": [
+      "Put rose syrup at the bottom of two tall glasses.",
+      "Add basil seeds and jelly.",
+      "Pour in the cold milk slowly.",
+      "Top with ice cream and serve immediately."
+    ],
+    "likes": 33,
+    "createdAt": "2026-09-12T10:00:00.000Z"
+  },
+  {
+    "id": "egg-hoppers",
+    "title": "Egg Hoppers (Appa)",
+    "description": "Bowl-shaped rice flour pancakes with crispy edges and a soft egg in the middle.",
+    "category": "breakfast",
+    "minutes": 40,
+    "servings": 4,
+    "ingredients": [
+      "2 cups rice flour",
+      "1 tsp instant yeast",
+      "1 tsp sugar",
+      "1 1/2 cups coconut milk",
+      "1/2 tsp salt",
+      "4 eggs"
+    ],
+    "steps": [
+      "Mix rice flour, yeast, sugar and warm water. Leave to ferment for 4–6 hours.",
+      "Stir in coconut milk and salt to make a thin batter.",
+      "Pour a ladle into a hot hopper pan and swirl it around the sides.",
+      "Crack an egg in the middle, cover and cook for 3–4 minutes."
+    ],
+    "likes": 54,
+    "createdAt": "2026-09-15T06:30:00.000Z"
+  }
+]

@@ -1,0 +1,8 @@
+body { font-family: system-ui, sans-serif; background: #f1f5f9; margin: 0; padding: 32px; }
+.board { max-width: 560px; margin: 0 auto; display: flex; flex-direction: column; gap: 12px; }
+.quote { background: white; border-radius: 12px; padding: 16px; box-shadow: 0 1px 3px rgb(0 0 0 / 10%); }
+.quote p { margin: 0 0 8px; font-size: 1.1rem; }
+.row { display: flex; align-items: center; justify-content: space-between; color: #64748b; }
+button { border: 1px solid #e2e8f0; background: white; border-radius: 8px; padding: 6px 12px; cursor: pointer; }
+.tag { font-size: 12px; background: #dcfce7; padding: 2px 8px; border-radius: 99px; vertical-align: middle; }
+.note { color: #64748b; font-size: 13px; }

@@ -1,0 +1,8 @@
+{
+  "name": "web-foundations-exercises",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "typecheck": "npx -y -p typescript@6 tsc --noEmit"
+  }
+}
